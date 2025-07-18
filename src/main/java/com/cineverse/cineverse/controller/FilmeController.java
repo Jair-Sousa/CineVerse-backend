@@ -33,6 +33,7 @@ public class FilmeController {
     // PUT - Atualizar um filme
     @PutMapping("/{id}")
     public ResponseEntity<Filme> atualizarFilme(@PathVariable Long id, @Valid @RequestBody Filme filmeAtualizado) {
+        System.out.println("Teste nome:" + filmeAtualizado.getNome());
         return filmeRepository.findById(id)
                 .map(filme -> {
                     filme.setNome(filmeAtualizado.getNome());

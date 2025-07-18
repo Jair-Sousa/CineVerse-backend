@@ -23,4 +23,26 @@ public class Filme {
 
     @NotNull(message = "O preço é obrigatório.")
     private Double preco;
+
+    public String getNome(){
+        return nome;
+    }
+    public String getTipoAudio(){
+        return tipoAudio;
+    }
+    public Double getPreco(){
+        return preco;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setTipoAudio(String tipoAudio){
+        this.tipoAudio = tipoAudio;
+    }
+
+    public void setPreco(Double preco){
+        this.preco = preco;
+    }
 }
