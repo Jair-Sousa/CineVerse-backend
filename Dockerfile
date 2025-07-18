@@ -7,8 +7,8 @@ RUN mvn clean package -DskipTests
 # Etapa 2: imagem de produção com Java 21
 FROM eclipse-temurin:21
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/cineverse-0.0.1-SNAPSHOT.jar app.jar
 
 # Comando para rodar a aplicação
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar", "--server.port=8080"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
