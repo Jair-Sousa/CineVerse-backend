@@ -1,54 +1,59 @@
 # 🎬 CineVerse - Backend
 
-API desenvolvida em Java com Spring Boot para gerenciamento de filmes. 
-Este projeto é o backend do sistema **CineVerse**, 
-permitindo operações CRUD e integração com o frontend.
+API REST desenvolvida em **Java 21 com Spring Boot** para gerenciamento de filmes.  
+Este é o backend do sistema **CineVerse**, responsável por operações CRUD completas 
+com integração em banco **PostgreSQL** na nuvem.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## 🚀 Tecnologias Utilizadas
 
-- Java 21
-- Spring Boot 3
-- Spring Data JPA
-- H2 Database (modo arquivo)
-- Swagger (SpringDoc OpenAPI)
-- Lombok
-
----
-
-## 🛠️ Funcionalidades
-
-- ✅ Listar todos os filmes
-- ✅ Adicionar novo filme
-- ✅ Atualizar filme por ID
-- ✅ Excluir filme por ID
-- ✅ Validações de campos com `@NotBlank` e `@NotNull`
-- ✅ Swagger para testes via navegador
+- ✅ Java 21
+- ✅ Spring Boot 3
+- ✅ Spring Data JPA
+- ✅ PostgreSQL (Render Cloud Database)
+- ✅ Swagger (SpringDoc OpenAPI)
+- ✅ Lombok
+- ✅ Git & GitHub
+- ✅ Docker (build local)
+- ✅ H2 (usado temporariamente na fase inicial)
 
 ---
 
-## 🎯 Requisitos para rodar localmente
+## 🌐 Integração & Deploy
 
-- Java 21 instalado
-- Maven ou IntelliJ com suporte a Spring
-- Git (para clonar o projeto)
+- 🌍 **Backend hospedado em:** [Render.com](https://render.com)
+- 🛢️ **Banco de dados:** PostgreSQL remoto
+- 🔐 **Configurações seguras:** Variáveis de ambiente com Render Environment
+- ⚙️ **CORS habilitado:** permitindo integração total com o frontend
+- 📡 Testes de requisição com **Insomnia**
 
 ---
 
-## ▶️ Como executar o projeto
+## 🛠️ Funcionalidades da API
 
-```bash
-# Clone o repositório
-git clone https://github.com/SEU_USUARIO/cineverse-backend.git
+- ✅ `GET /api/filmes` - Listar todos os filmes
+- ✅ `POST /api/filmes` - Adicionar um novo filme
+- ✅ `PUT /api/filmes/{id}` - Atualizar um filme por ID
+- ✅ `DELETE /api/filmes/{id}` - Excluir um filme por ID
+- ✅ Validações com `@NotBlank`, `@NotNull` e `@Valid`
+- ✅ Suporte ao padrão RESTful
+- ✅ Documentação interativa com Swagger UI
 
-# Acesse a pasta
-cd cineverse-backend
+---
 
-# Compile e execute com Maven
-./mvnw spring-boot:run
+## 🔐 Banco de Dados
 
-👨‍💻 Desenvolvido por
-Jair Sousa
-Portfólio • LinkedIn 
+- **Modelo atual:**
+  ```java
+  class Filme {
+      Long id;
+      String nome;
+      String tipoAudio;
+      Double preco;
+  }
+  
+👨‍💻 Autor: Jair Sousa
+
+🌐 Portfólio • LinkedIn
 www.linkedin.com/in/jair-sousa-ads
